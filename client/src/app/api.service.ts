@@ -6,9 +6,15 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class ApiService {
 
-API_URL : string = "http://localhost:3000/";
-
-  constructor(public http: HttpClient) { }
+API_URL : string = "";
+origin : string = document.location.origin;
+  constructor(public http: HttpClient) { 
+    if(this.origin.includes("localhost")){
+          this.API_URL = "http://localhost:3000/"
+    }else{
+          console.log(this.origin);
+    }
+  }
 
   // read method    
   public get(path) {

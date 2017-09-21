@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 import { Product } from '../models/products';
 
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -14,7 +15,8 @@ export class ProductListComponent implements OnInit {
   public rows : Array<Product>;
   
   constructor(public apiService: ApiService , public router : Router) {
-   }
+    
+  }
 
 
   ngOnInit() {

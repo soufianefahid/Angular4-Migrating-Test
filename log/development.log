@@ -600,3 +600,11 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 381ms (Views: 378.6ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/products" for 127.0.0.1 at 2017-09-21 14:42:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (27.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (57.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.15ms)
+Completed 200 OK in 317ms (Views: 139.2ms | ActiveRecord: 161.3ms)
+
+
