@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , OnChanges } from '@angular/core';
+import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
-import { ApiService } from '../api.service';
+import { ApiService } from '../services/api.service';
 import { Product } from '../models/products';
 
 
@@ -9,7 +10,7 @@ import { Product } from '../models/products';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit, OnChanges {
 
   public columns = ['id','name'];
   public rows : Array<Product>;
@@ -18,7 +19,9 @@ export class ProductListComponent implements OnInit {
     
   }
 
-
+  ngOnChanges(changes){
+    console.log(changes);
+  };
   ngOnInit() {
     this.apiService.get("products").subscribe(
     (data : Product[])=>{

@@ -1,6 +1,7 @@
 # README
 
-
+*Link for Project :
+    https://damp-spire-34334.herokuapp.com/products
 
 * Ruby version
     I'm using ruby version '2.3.0'
@@ -8,9 +9,8 @@
 * Configuration
     Before Push to Heroku you need to do configurations in Client/package.json 
     this repository contains a well configured file 
-* Database creation
+* Database setup
     After the push Just run this command to have some data for test : heroku run rake db:seed
-* Database initialization
 
 * Deployment instructions 
     First you need to add buildPacks for heroku

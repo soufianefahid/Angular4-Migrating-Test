@@ -608,3 +608,228 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 317ms (Views: 139.2ms | ActiveRecord: 161.3ms)
 
 
+Started GET "/products" for 127.0.0.1 at 2017-09-21 16:14:51 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (8.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.5ms)
+Completed 200 OK in 36ms (Views: 26.4ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2017-09-21 16:14:54 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (25.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 314ms (Views: 2.0ms | ActiveRecord: 25.5ms)
+
+
+Started PUT "/products/5" for 127.0.0.1 at 2017-09-21 16:15:03 +0100
+Processing by ProductsController#update as HTML
+  Parameters: {"id"=>"5", "name"=>"Product 001_010", "product"=>{"id"=>"5", "name"=>"Product 001_010"}}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Unpermitted parameter: id
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (24.4ms)[0m  [1m[33mUPDATE "products" SET "name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["name", "Product 001_010"], ["updated_at", "2017-09-21 15:15:03.413134"], ["id", 5]]
+  [1m[35m (145.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 183ms (Views: 1.8ms | ActiveRecord: 170.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-21 16:15:05 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.96ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/products/5" for 127.0.0.1 at 2017-09-21 16:15:11 +0100
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 5]]
+  [1m[35m (18.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 23ms (ActiveRecord: 21.0ms)
+
+
+Started DELETE "/products/3" for 127.0.0.1 at 2017-09-21 16:15:22 +0100
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 3]]
+  [1m[35m (15.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 25ms (ActiveRecord: 18.9ms)
+
+
+Started DELETE "/products/9" for 127.0.0.1 at 2017-09-21 16:15:24 +0100
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 9]]
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 25ms (ActiveRecord: 18.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-21 16:17:46 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.86ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-21 16:38:11 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.85ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-21 16:55:36 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.7ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-21 16:57:05 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.51ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-21 16:58:01 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-21 16:58:05 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-21 16:58:12 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-21 16:58:14 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-21 16:58:21 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.56ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-21 17:29:19 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (19.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.49ms)
+Completed 200 OK in 70ms (Views: 49.5ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-25 17:28:54 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (67.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (29.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.69ms)
+Completed 200 OK in 301ms (Views: 125.9ms | ActiveRecord: 154.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-25 17:29:03 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.44ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2017-09-25 17:29:10 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 35ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/products/4" for 127.0.0.1 at 2017-09-25 17:29:15 +0100
+Processing by ProductsController#update as HTML
+  Parameters: {"id"=>"4", "name"=>"Product 004-004", "product"=>{"id"=>"4", "name"=>"Product 004-004"}}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: id
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (113.9ms)[0m  [1m[33mUPDATE "products" SET "name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["name", "Product 004-004"], ["updated_at", "2017-09-25 16:29:15.724976"], ["id", 4]]
+  [1m[35m (107.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 245ms (Views: 2.4ms | ActiveRecord: 222.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-25 17:29:20 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.65ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-26 09:53:02 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (316.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (41.45ms)
+Completed 200 OK in 432ms (Views: 115.7ms | ActiveRecord: 316.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-26 09:53:32 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.66ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-26 09:53:36 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.78ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-26 09:53:46 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.67ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-26 09:53:50 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.91ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-26 09:54:14 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2017-09-26 09:54:16 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.73ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
